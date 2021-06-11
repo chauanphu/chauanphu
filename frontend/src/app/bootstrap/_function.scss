@@ -1,0 +1,12 @@
+@function cal_width($i){
+    @return 100% /10 * $i;
+}
+
+@mixin generate-columns($screen){
+    @for $x from 1 to 6{
+        .col#{$screen}-#{$x}{
+                border: 1px solid blue;
+                width: cal_width($x);
+        }
+    }
+}

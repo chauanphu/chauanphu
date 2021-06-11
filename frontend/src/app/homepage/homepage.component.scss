@@ -1,0 +1,22 @@
+.nav-bar-fluid{
+    background-color: #f8f8f8;
+    height: 4em;
+}
+
+.extra-bar{
+    background-color: black;
+    color: white;
+    .row{
+        justify-content: flex-start;
+    }
+
+    .btn-contact{
+        color: orange;
+    }
+
+    .info{
+        padding-top: .8em;
+        text-align: center;
+        margin-right: 50%;
+    }
+}

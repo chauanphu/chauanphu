@@ -1,5 +1,14 @@
 @import "./screen";
+@import "./function";
 
+%fluid{
+    border: 1px solid red;  
+    width: 100%;
+    align-items: center;
+
+    display: flex;
+    justify-content: center;
+}
 .container{
     width: 90%;
     max-width: 1400;
@@ -9,10 +18,12 @@
     width: 100%
 }
 
+.extra-bar{
+    @extend %fluid;
+}
+
 .nav-bar{
-    width: 90%;
-    display: flex;
-    justify-content: center;
+    @extend %fluid;
 
     .nav-brand{
         border: 1px solid red;  
@@ -21,13 +32,20 @@
             order: 2;
             align-items: center;
         }
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
     }
 
     .nav-list{
         border: 1px solid red;
-        
-        width: 50%;
+        margin: 0 auto;
+        width: 40%;
 
+        display: flex;
+        justify-content: space-between;
         @include mobile{
             display: none;
         }
@@ -45,6 +63,7 @@
         order: 3;
     }
 }
+
 .nav-bar-fluid{
     width: 100%;
     @extend .nav-bar;
@@ -54,21 +73,8 @@
     display: flex;
     justify-content: space-between;
     
-    .col-mobile{
-        @include mobile{
-            background-color: blue;
-        }
-    }
-
-    .col-tablet{
-        @include tablet{
-            background-color: blue;
-        }
-    }
-
-    .col-desktop{
-        @include desktop{
-            background-color: red;
-        }
-    }
+    @include generate-columns("");
+    @include generate-columns("-mobile");
+    @include generate-columns("-tablet");
+    @include generate-columns("-desktop");
 }
