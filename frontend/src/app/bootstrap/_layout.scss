@@ -1,0 +1,74 @@
+@import "./screen";
+
+.container{
+    width: 90%;
+    max-width: 1400;
+}
+
+.container-fluid{
+    width: 100%
+}
+
+.nav-bar{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+    .nav-brand{
+        border: 1px solid red;  
+
+        @include mobile{
+            order: 2;
+            align-items: center;
+        }
+    }
+
+    .nav-list{
+        border: 1px solid red;
+        
+        width: 50%;
+
+        @include mobile{
+            display: none;
+        }
+    }
+
+    .nav-menu{
+        display: none;
+        @include mobile{
+            display: initial;
+            border: 1px solid red;
+        }
+    }
+    .nav-right-list{
+        border: 1px solid red;
+        order: 3;
+    }
+}
+.nav-bar-fluid{
+    width: 100%;
+    @extend .nav-bar;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    
+    .col-mobile{
+        @include mobile{
+            background-color: blue;
+        }
+    }
+
+    .col-tablet{
+        @include tablet{
+            background-color: blue;
+        }
+    }
+
+    .col-desktop{
+        @include desktop{
+            background-color: red;
+        }
+    }
+}
