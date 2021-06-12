@@ -45,7 +45,7 @@
         width: 40%;
 
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         @include mobile{
             display: none;
         }
@@ -70,6 +70,7 @@
 }
 
 .row{
+    height: 100%;
     display: flex;
     justify-content: space-between;
     
@@ -77,4 +78,12 @@
     @include generate-columns("-mobile");
     @include generate-columns("-tablet");
     @include generate-columns("-desktop");
+}
+
+.mobile-only{
+    @include mobile-only;
+}
+
+.desktop-only{
+    @include desktop-only;
 }

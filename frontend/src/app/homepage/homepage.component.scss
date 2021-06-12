@@ -8,15 +8,17 @@
     color: white;
     .row{
         justify-content: flex-start;
+        .info{
+            position: relative;
+            text-align: center;
+            left: 20%;
+            strong{
+                color: palegreen;
+            }
+        }
     }
 
     .btn-contact{
         color: orange;
-    }
-
-    .info{
-        padding-top: .8em;
-        text-align: center;
-        margin-right: 50%;
     }
 }

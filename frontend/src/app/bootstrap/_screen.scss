@@ -1,5 +1,4 @@
-$desktop-screen: 1000px;
-$tablet-screen: $desktop-screen - 1px;
+$desktop-screen: 1024px;
 $mobile-screen: 767px;
 
 @mixin mobile {
@@ -9,19 +8,40 @@ $mobile-screen: 767px;
 }
 
 @mixin tablet {
-    @media (min-width: $mobile-screen + 1px) and (max-width: $tablet-screen){
-        .mobile-item, .desktop-item{
-            display: none;
-        }
+    @media (min-width: $mobile-screen + 1px) and (max-width: $desktop-screen - 1px){
         @content;
     }
 }
 
 @mixin desktop {
     @media (min-width: $desktop-screen) {
-        .tablet-item, .mobile-item{
-            display: none
-        }
        @content; 
+    }
+}
+
+@mixin not-mobile{
+    @include mobile{
+        display: none;
+    }
+}
+
+@mixin desktop-only{
+    display: none;
+    @include desktop{
+        display:initial;
+    }
+}
+
+@mixin tablet-only{
+    display: none;
+    @include desktop{
+        display:initial;
+    }
+}
+
+@mixin mobile-only{
+    display: none;
+    @include desktop{
+        display:initial;
     }
 }
