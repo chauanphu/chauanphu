@@ -1,24 +1,78 @@
-.nav-bar-fluid{
-    background-color: #f8f8f8;
-    height: 4em;
-}
+@import "../bootstrap/main.scss";
 
 .extra-bar{
-    background-color: black;
+    background-color: #0e6629;
     color: white;
     .row{
-        justify-content: flex-start;
+        justify-content: space-between;
+        align-content: flex-start;
+        
+        .contact{
+            height: fit-content;
+            align-items: center;
+
+            @include not-mobile{
+                // display: flex;
+                // font-size: .9rem;
+                // padding-right: .5rem;
+            }
+
+            @include mobile-only{
+                // align-items: flex-end;
+            }
+        }
+
+        .spacer{
+            margin: 0 .5em;
+        }
         .info{
-            position: relative;
-            text-align: center;
-            left: 20%;
+            text-align: end;
+            font-size: .9rem;
             strong{
                 color: palegreen;
             }
+            @include mobile{
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+.nav-bar-fluid{
+    background-color: #81d41a;
+    color: white;
+    height: 4em;
+    
+    .nav-brand{
+        p{
+            margin: 0;
+        }
+        p:first-child{
+            font-size: .8em;
+            margin-bottom: .5em;
+        }
+        p:last-child{
+            font-size: 1.2em;
+            color: #0e6629;
         }
     }
 
-    .btn-contact{
-        color: orange;
+    @include mobile-only{
+            position: relative;
+            justify-content: space-between;
+            width: 100%;
+
+            .nav-brand{
+                font-size: .8em;
+            }
+    }
+
+    @include not-mobile{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            .nav-brand{
+                font-size: 1.2rem;
+            }
     }
 }

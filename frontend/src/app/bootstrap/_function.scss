@@ -1,23 +1,50 @@
 @import "./screen";
 
+$start: 0;
+$end: 100;
+
 @function cal_width($i){
-    @return 100% /10 * $i;
+    @return 100% /100 * $i;
 }
 
-@mixin generate-columns($screen){
-
-    // @if $screen == "-desktop"{
-    //     @include desktop-only;
-    // } @else if $screen == "tablet"{
-    //     @include tablet-only;
-    // } @else if $screen == "mobile"{
-    //     @include mobile-only;
-    // }
-
-    @for $x from 1 to 10{
-        .col#{$screen}-#{$x}{
-                border: 1px solid blue;
+@mixin generate-columns{
+    @for $x from $start to $end{
+        .col-#{$x}{
+            border: 1px solid yellow;
                 width: cal_width($x);
+        }
+    }
+}
+
+@mixin generate-d-columns{  
+    @include desktop{    
+        @for $x from $start to $end{
+            .col-d-#{$x}{
+                    border: 1px solid red;
+                    width: cal_width($x);
+            }
+    }
+}
+}
+
+@mixin generate-t-columns{
+    @include tablet{
+        @for $x from $start to $end{
+            .col-t-#{$x}{
+                    border: 1px solid blue;
+                    width: cal_width($x);
+            }
+        }
+    }
+}
+
+@mixin generate-m-columns{
+    @include mobile{
+        @for $x from $start to $end{
+            .col-m-#{$x}{
+                    border: 1px solid pink;
+                    width: cal_width($x);
+            }
         }
     }
 }

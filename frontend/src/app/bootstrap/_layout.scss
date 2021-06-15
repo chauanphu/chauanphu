@@ -2,20 +2,22 @@
 @import "./function";
 
 %fluid{
-    border: 1px solid red;  
+    border: 1px dotted black;  
     width: 100%;
-    align-items: center;
 
     display: flex;
-    justify-content: center;
+    align-items: center;
+
 }
 .container{
+    border: 1px dotted black;   
     width: 90%;
-    max-width: 1400;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .container-fluid{
-    width: 100%
+    @extend %fluid;
 }
 
 .extra-bar{
@@ -23,19 +25,20 @@
 }
 
 .nav-bar{
-    @extend %fluid;
-
     .nav-brand{
         border: 1px solid red;  
-
+        text-align: center;
         @include mobile{
-            order: 2;
             align-items: center;
         }
 
         img{
             height: 100%;
             width: 100%;
+        }
+        span{
+            position: relative;
+            top: .4em;
         }
     }
 
@@ -46,18 +49,8 @@
 
         display: flex;
         justify-content: space-around;
-        @include mobile{
-            display: none;
-        }
     }
 
-    .nav-menu{
-        display: none;
-        @include mobile{
-            display: initial;
-            border: 1px solid red;
-        }
-    }
     .nav-right-list{
         border: 1px solid red;
         order: 3;
@@ -65,25 +58,16 @@
 }
 
 .nav-bar-fluid{
-    width: 100%;
+    @extend %fluid;
     @extend .nav-bar;
 }
 
 .row{
-    height: 100%;
     display: flex;
-    justify-content: space-between;
-    
-    @include generate-columns("");
-    @include generate-columns("-mobile");
-    @include generate-columns("-tablet");
-    @include generate-columns("-desktop");
-}
+    align-items: center;
 
-.mobile-only{
-    @include mobile-only;
-}
-
-.desktop-only{
-    @include desktop-only;
+    @include generate-columns;
+    @include generate-d-columns;
+    @include generate-t-columns;
+    @include generate-m-columns;
 }
