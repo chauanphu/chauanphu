@@ -1,0 +1,143 @@
+<mat-drawer-container>
+  <mat-drawer #drawer>
+    <div class="nav-bar-fluid">
+      <div class="nav-brand">
+          <span>
+            <p>BẢO HỘ LAO ĐỘNG</p>
+            <p>TRẦN GIA PHÁT</p>
+          </span>
+      </div> 
+    </div>
+
+    <mat-form-field appearance=fill >
+      <mat-icon matSuffix>search</mat-icon>
+      <input matInput>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-nav-list>
+        <mat-label>DANH MUC</mat-label>
+        <mat-list-item>
+          Dong Phuc
+          <mat-icon matListIcon>accessibility</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          Bao Ve Mat
+          <mat-icon matListIcon>remove_red_eye</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          Gang Tay
+          <mat-icon matListIcon>pan_tool</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+          Mat Na
+          <mat-icon matListIcon>masks</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          Phong Chay Chua Chay
+          <mat-icon matListIcon>local_fire_department</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          Khac  
+          <mat-icon matListIcon>more</mat-icon>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-nav-list>
+
+      <div class="spacer"></div>
+
+      <div class="footer">
+        <mat-label>LIEN LAC</mat-label>
+          <mat-nav-list>
+            <mat-list-item class="btn-phone">
+              092-9110-548
+              <mat-icon matListIcon>phone</mat-icon>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item class="btn-email">
+              chauanphu@gmail.com
+              <mat-icon matListIcon>email</mat-icon>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+          </mat-nav-list>
+      </div>
+    </div>
+  
+  </mat-drawer>
+
+  <!-- Extra bar -->
+  <nav class="extra-bar">
+      <div class="container">
+        <div class="row">
+          <div class="contact">
+            
+            <div class="not-mobile">
+              <mat-icon>phone</mat-icon>
+              <span class="">09 290 110 548</span>
+              <span class="spacer"></span>
+              <mat-icon>email</mat-icon>
+              <span class="">chauanphu@gmail.com</span>
+            </div>
+          </div>
+
+          <div class="col-d-40 col-m-90 info">
+            48/5V - Thái Thi Giữ - Hóc Môn - HCM
+          </div>
+        </div>
+      </div>
+  </nav>
+
+<!-- Banner -->
+  <nav class="nav-bar-fluid banner">
+  <div class="container">
+    <div class="row">
+
+      <button class="mobile-only" 
+      mat-icon-button
+      (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+        <div class="nav-brand">
+          <p>BẢO HỘ LAO ĐỘNG</p>
+          <p>TRẦN GIA PHÁT</p>
+        </div>  
+
+        <div class="not-mobile col-d-30">
+          <mat-form-field appearance=fill>
+            <mat-icon matSuffix>search</mat-icon>
+            <input matInput placeholder="Tim kiem...">
+            </mat-form-field>
+        </div>
+
+        <button mat-icon-button>
+          <mat-icon>shopping_cart</mat-icon>
+        </button> 
+
+    </div>
+  </div>
+  </nav>
+
+  <nav class="nav-bar-fluid categories not-mobile">
+    <div class="container">
+      <div class="row">
+        <button mat-button>Dong Phuc <mat-icon>expand_more</mat-icon></button>
+        <button mat-button>Bao Ve Mat<mat-icon>expand_more</mat-icon></button>
+        <button mat-button>Gang Tay<mat-icon>expand_more</mat-icon></button>
+        <button mat-button>Mat Na<mat-icon>expand_more</mat-icon></button>
+        <button mat-button>Giay Ung<mat-icon>expand_more</mat-icon></button>
+        <button mat-button>Khac<mat-icon>expand_more</mat-icon></button>
+      </div>
+    </div>
+  </nav>
+
+</mat-drawer-container>
+

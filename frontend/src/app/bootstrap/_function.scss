@@ -20,7 +20,7 @@ $end: 100;
     @include desktop{    
         @for $x from $start to $end{
             .col-d-#{$x}{
-                    border: 1px solid red;
+                    // border: 1px solid red;
                     width: cal_width($x);
             }
     }
