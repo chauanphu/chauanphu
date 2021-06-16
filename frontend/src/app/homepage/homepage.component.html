@@ -1,50 +1,57 @@
-<!-- Extra bar -->
-<nav class="extra-bar">
-  <div class="container">
-    <div class="row">
-      <div class="contact">
-        <div class="mobile-only">
-          <button class="btn-phone" mat-icon-button>
-            <mat-icon>phone</mat-icon>
-          </button>
-        </div>
-        
-        <div class="not-mobile">
-          <mat-icon>phone</mat-icon>
-          <span class="">09 290 110 548</span>
-          <span class="spacer"></span>
-          <mat-icon>phone</mat-icon>
-          <span class="">09 290 110 548</span>
+<mat-drawer-container>
+  <mat-drawer #drawer>
+    Hello
+  </mat-drawer>
+  <!-- Extra bar -->
+  <nav class="extra-bar">
+      <div class="container">
+        <div class="row">
+          <div class="contact">
+            <div class="mobile-only">
+              <button class="btn-phone" mat-icon-button>
+                <mat-icon>phone</mat-icon>
+              </button>
+            </div>
+            
+            <div class="not-mobile">
+              <mat-icon>phone</mat-icon>
+              <span class="">09 290 110 548</span>
+              <span class="spacer"></span>
+              <mat-icon>phone</mat-icon>
+              <span class="">09 290 110 548</span>
+            </div>
+          </div>
+
+          <div class="col-d-40 col-m-90 info">
+            48/5V - Thái Thi Giữ - Hóc Môn - HCM
+          </div>
         </div>
       </div>
+  </nav>
 
-      <div class="col-d-40 col-m-90 info">
-        48/5V - Thái Thi Giữ - Hóc Môn - HCM
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- Navigation Bar -->
-<nav class="nav-bar-fluid">
+<!-- Banner -->
+  <nav class="nav-bar-fluid banner">
   <div class="container">
     <div class="row">
+
+      <button class="mobile-only" 
+      mat-icon-button
+      (click)="drawer.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
       
-      <!-- <div class="mobile-only">
-          <button mat-icon-button>
-            <mat-icon>menu</mat-icon>
-        </button>
-      </div> -->
-
-      <div class="not-mobile">
         <div class="nav-brand">
           <p>BẢO HỘ LAO ĐỘNG</p>
           <p>TRẦN GIA PHÁT</p>
         </div>  
-        <button mat-icon-button>
-          <mat-icon>shopping_cart</mat-icon>
-        </button> 
-      </div>
+
+          <button mat-icon-button>
+            <mat-icon>shopping_cart</mat-icon>
+          </button> 
+
     </div>
   </div>
-</nav>
+  </nav>
+
+</mat-drawer-container>
+

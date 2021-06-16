@@ -28,9 +28,6 @@
     .nav-brand{
         border: 1px solid red;  
         text-align: center;
-        @include mobile{
-            align-items: center;
-        }
 
         img{
             height: 100%;
@@ -53,7 +50,6 @@
 
     .nav-right-list{
         border: 1px solid red;
-        order: 3;
     }
 }
 

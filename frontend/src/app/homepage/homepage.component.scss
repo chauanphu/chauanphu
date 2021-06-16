@@ -1,5 +1,9 @@
 @import "../bootstrap/main.scss";
 
+mat-drawer-container{
+    height: 100%;
+}
+
 .extra-bar{
     background-color: #0e6629;
     color: white;
@@ -12,13 +16,12 @@
             align-items: center;
 
             @include not-mobile{
-                // display: flex;
-                // font-size: .9rem;
-                // padding-right: .5rem;
+                display: flex;
+                padding-right: .5rem;
             }
 
             @include mobile-only{
-                // align-items: flex-end;
+                align-items: flex-end;
             }
         }
 
@@ -35,21 +38,32 @@
                 font-size: .8rem;
             }
         }
+
+        @include tablet{
+            .contact, .info{
+                font-size: .7rem;
+            }
+        }
     }
 }
 
-.nav-bar-fluid{
+.banner{
     background-color: #81d41a;
     color: white;
     height: 4em;
-    
+    .row{
+        justify-content: space-between;
+    }
     .nav-brand{
+        
+        font-size: 1.2em;
+
         p{
             margin: 0;
         }
         p:first-child{
             font-size: .8em;
-            margin-bottom: .5em;
+            margin-bottom: .1em;
         }
         p:last-child{
             font-size: 1.2em;
@@ -57,20 +71,11 @@
         }
     }
 
-    @include mobile-only{
-            position: relative;
-            justify-content: space-between;
-            width: 100%;
-
-            .nav-brand{
-                font-size: .8em;
-            }
-    }
+    @include mobile-only;
 
     @include not-mobile{
-            display: flex;
             width: 100%;
-            justify-content: space-between;
+
             .nav-brand{
                 font-size: 1.2rem;
             }

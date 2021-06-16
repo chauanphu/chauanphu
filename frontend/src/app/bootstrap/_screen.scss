@@ -1,7 +1,7 @@
 $desktop-screen: 1024px;
-$min-tablet: 376px;
-$max-tablet: 1023px;
-$mobile-screen: 375px;
+$mobile-screen: 500px;
+$min-tablet: $mobile-screen + 1px;
+$max-tablet: $desktop-screen - 1px;
 
 @mixin mobile {
     @media (max-width: $mobile-screen){
@@ -31,6 +31,7 @@ $mobile-screen: 375px;
         @content;
         @include mobile{
             display: none;
+            background-color: red;
         }
     }
 }
