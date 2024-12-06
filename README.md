@@ -1,10 +1,14 @@
-- 👋 Hi, I’m Chau An Phu
-- 👀 I’m interested in creating applications from web, mobile to desktop and all types of programming
-- 🌱 I’m currently learning C#, Python and Javascript
-- 💞️ I’m looking to collaborate on a remotely part-time job for a foreign company. 
-- 📫 You can reach me at chauanphu@gmail.com
+# Hi there, I'm Châu An Phú! 👋
 
-<!---
-chauanphu/chauanphu is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Welcome to my GitHub profile! Here are some things about me:
+
+- 🔭 I’m currently working as a research student in MIDIS Lab of International University - Ho Chi Minh National University.
+- 🌱 I’m currently learning on Data Science and AI especially intergrated for medical data.
+- 👯 I’m looking to collaborate on...
+- 🤔 I’m looking for help with...
+- 💬 Ask me about...
+- 📫 How to reach me: ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=$$USERNAME$$&show_icons=true)
